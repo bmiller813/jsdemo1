@@ -1,0 +1,33 @@
+<style>
+    #treasure,
+    #person{
+        position: absolute;
+        left: 0px;
+        top: 136px;
+    }
+</style>
+<body>
+    SCORE: <div id="score">0</div>
+    <button id="go1" onclick="moveMe()"> GO! </button> Keep Clicking to go!
+    <div id="person" >@</div>
+    <div id="treasure">[X]</div>
+</body>
+<script>
+    let x = 0;
+    let t = 100;
+    let s = 0;
+    window.treasure.style.left = t + "px";
+
+    function moveMe(){
+      x += 10; //Same as x = x + 10 
+      console.log(x);
+       window.person.style.left = x + "px";
+
+       if(x == t){ // COLLISION DETECTION
+        s += 100; // INCREMENT SCORE
+        window.treasure.innerHTML = "[ ]"//REMOVE TREASURE
+       }
+
+       window.score.innerHTML = s; //UPDATE DISPLAY
+    }
+</script>
