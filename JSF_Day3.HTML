@@ -1,0 +1,25 @@
+<body>
+    
+    <input id="username" value="" placeholder="name...">
+    <button id="go" onclick="updateDisplay()"> Click Me! </button>
+    <p id="output">Pardon me Sire... <br>May I ask who thy is?</p>
+
+</body>
+<script>
+
+    //FUNCTION MUST BE CALLED BY NAME
+    function updateDisplay(){ //NAME
+        const name = window.username.value;
+        window.output.innerHTML = "OH SNAP!<br> What up " + name + "!";
+    }
+
+    
+    //ALTERNATIVE to onlick = on the button itself (This is better professionaly)
+    //window.go.addEventListener("click", updateDisplay)
+    //updateDisplay(); would call immediately and show "OH SNAP!<br> What up "
+   
+    //BONUS COLORS
+    document.body.style.backgroundColor = "#333333";
+    document.body.style.color = "goldenrod";
+    
+</script>
